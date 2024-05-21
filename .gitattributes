@@ -1,0 +1,7 @@
+* test=auto
+*.hbs test eol=lf
+*.json text eol=lf
+*.js text eol=l* test=auto
+*.hbs test eol=lf
+*.json text eol=lf
+*.js text eol=lff
