@@ -11,9 +11,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "clsx": "^2.1.1",
     "express": "^4.19.2",
     "express-handlebars": "^7.1.2",
-    "mongoose": "^8.4.0"
+    "mongoose": "^8.4.0",
+    "react-router": "^6.23.1",
+    "react-router-dom": "^6.23.1"
   },
   "devDependencies": {
     "morgan": "^1.10.0",
