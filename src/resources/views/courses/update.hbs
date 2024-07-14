@@ -1,0 +1,93 @@
+<div class="mt-4">
+  {{!-- {{#each courses}}
+    <form method="post" action="/courses/postUpdate">
+      <div class="mb-3">
+        <input
+          type="hidden"
+          id="courseID"
+          name="courseID"
+          value="{{this._id}}"
+        />
+        <label for="name" class="form-label">Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="name"
+          name="name"
+          value="{{this.name}}"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="description" class="form-label">description</label>
+        <input
+          type="text"
+          class="form-control"
+          id="description"
+          name="description"
+          value="{{this.description}}"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="videos" class="form-label">videos</label>
+        <input
+          type="text"
+          class="form-control"
+          id="videos"
+          name="videos"
+          value="{{this.videos}}"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="image" class="form-label">image</label>
+        <input
+          type="text"
+          class="form-control"
+          id="image"
+          name="image"
+          value="{{this.image}}"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="slug" class="form-label">slug</label>
+        <input
+          type="text"
+          class="form-control"
+          id="slug"
+          name="slug"
+          value="{{this.slug}}"
+        />
+      </div>
+      <button type="submit" class="btn btn-primary">Update khoa hoc</button>
+    </form>
+  {{/each}} --}}
+  <div class="row">
+    {{#each courses}}
+      <div class="col-sm-6 col-lg-4">
+        <div class="card mt-2">
+          <a href="/courses/update/{{this.slug}}"><img
+              src="{{this.image}}"
+              class="card-img-top"
+              alt="..."
+            /></a>
+          <div class="card-body">
+            <a href="/courses/update/{{this.slug}}"><h5
+                class="card-title"
+              >{{this.name}}</h5></a>
+            <p class="card-text">{{this.description}}</p>
+            <div class="card-body d-flex justify-content-between">
+              <form action="/courses/update/{{this.slug}}" method="GET">
+                <button
+                  type="submit"
+                  class="btn btn-lg btn-primary"
+                >Sửa</button>
+              </form>
+              <form action="/courses/delete/{{this._id}}" method="POST">
+                <button type="submit" class="btn btn-lg btn-danger">Xóa</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+</div>

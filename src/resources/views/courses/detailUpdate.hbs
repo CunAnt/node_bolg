@@ -1,0 +1,73 @@
+<div class="mt-4">
+  {{#if success_msg}}
+    <div class="alert alert-success" role="alert">
+      {{success_msg}}
+    </div>
+  {{/if}}
+
+  {{#if error_msg}}
+    <div class="alert alert-danger" role="alert">
+      {{error_msg}}
+    </div>
+  {{/if}}
+  <form method="post" action="/courses/postUpdate">
+    <div class="mb-3">
+      <input
+        type="hidden"
+        id="courseID"
+        name="courseID"
+        value="{{course._id}}"
+      />
+      <label for="name" class="form-label">Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="name"
+        name="name"
+        value="{{course.name}}"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="description" class="form-label">description</label>
+      <input
+        type="text"
+        class="form-control"
+        id="description"
+        name="description"
+        value="{{course.description}}"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="videos" class="form-label">videos</label>
+      <input
+        type="text"
+        class="form-control"
+        id="videos"
+        name="videos"
+        value="{{course.videos}}"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="image" class="form-label">image</label>
+      <input
+        type="text"
+        class="form-control"
+        id="image"
+        name="image"
+        value="{{course.image}}"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="slug" class="form-label">slug</label>
+      <input
+        type="text"
+        class="form-control"
+        id="slug"
+        name="slug"
+        value="{{course.slug}}"
+      />
+    </div>
+    <button type="submit" class="btn btn-primary">Update khoa hoc</button>
+  </form>
+
+</div>
